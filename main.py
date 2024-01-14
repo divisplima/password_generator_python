@@ -8,6 +8,7 @@ def title(msg=''):
     print(msg.center(50))
     print("=" * 50)
 
+
 def get_character_set():
     character_set = string.ascii_letters + string.digits + string.punctuation
     return character_set
