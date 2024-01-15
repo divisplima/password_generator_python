@@ -5,6 +5,7 @@ from time import sleep
 
 colours_code = {
     'clean': '\033[0m',
+    'underscode' : '\033[4m',
     'red': '\033[31m',
     'green': '\033[32m',
     'yellow': '\033[33m',
@@ -12,7 +13,7 @@ colours_code = {
 }
 
 def title(msg=''):
-    print(colours_code['green'] + "=" * 50)
+    print(colours_code['red'] + "=" * 50)
     print(msg.center(50))
     print("=" * 50 + colours_code['clean'])
 
@@ -21,7 +22,7 @@ def password_type():
     print(f"{colours_code['yellow']}Define your password type:\n[1] - Numeric\n[2] - Alphanumeric\n[3] - Alphanumeric with Punctuation{colours_code['clean']}")
     while True:
         try:
-            option = int(input(f"{colours_code['green']}Your option: {colours_code['clean']}"))
+            option = int(input(f"{colours_code['yellow']}{colours_code['underscode']}Your option{colours_code['clean']}: "))
             if option in [1, 2, 3]:
                 break
             else:
@@ -44,7 +45,7 @@ def get_character_set(option):
 
 def get_password_length(length=8):
     try:
-        password_length = int(input(f"{colours_code['green']}Password length (default is {length}): {colours_code['clean']}"))
+        password_length = int(input(f"{colours_code['yellow']}{colours_code['underscode']}Password length (default is {length}){colours_code['clean']}: "))
     except ValueError:
         password_length = length
     return password_length
