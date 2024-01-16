@@ -26,9 +26,9 @@ def password_type():
             if option in [1, 2, 3]:
                 break
             else:
-                print(f"{colours_code['red']}Insert a valid number.{colours_code['clean']}")
+                print(f"{colours_code['red']}Insert a valid number.{colours_code['clean']}", end=' ')
         except ValueError:
-            print(f"{colours_code['red']}Insert a valid number.{colours_code['clean']}")
+            print(f"{colours_code['red']}Insert a valid number.{colours_code['clean']}", end=' ')
     return option
 
 
